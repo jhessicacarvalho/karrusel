@@ -1,9 +1,19 @@
 ---
 import Layout from "../layouts/Layout.astro";
+import Artist from "../components/Artist.astro";
+// const data = await fetch("https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/", {mangler navnet på database
+//   method: "GET",
+//   headers: { apikey: "API NØGLEN FRA SUPABASE" },
+// }).then((res) => res.json());
+// console.log(data); SÅDAN HENTER MAN DATA IND FRA SUPABASE.
 ---
 
 <Layout>
-  <main>
-    <h1>Program</h1>
-  </main>
+  <section class="listeview">
+    {
+      data.map((thing) => {
+        return <Artist data={thing} />;
+      })
+    }
+  </section>
 </Layout>

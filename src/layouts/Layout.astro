@@ -1,5 +1,6 @@
 ---
 import Footer from "../components/Footer.astro";
+import Navigation from "../components/Navigation.astro";
 ---
 
 <html lang="en">
@@ -11,7 +12,10 @@ import Footer from "../components/Footer.astro";
     <title>Astro</title>
   </head>
   <body>
-    <slot />
+    <Navigation />
+    <main>
+      <slot />
+    </main>
     <Footer />
   </body>
 </html>
