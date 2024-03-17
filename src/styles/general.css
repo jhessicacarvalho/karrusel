@@ -4,3 +4,7 @@ body {
 p {
   color: #f0e5ff;
 }
+
+img {
+  /* max-width: 100%; */
+}

@@ -2,8 +2,44 @@
 import "../styles/general.css";
 ---
 
-<section>
-  <h1>COUNTDOWN TO FESTIVAL</h1>
-  <div></div>
+<section class="countdown-container">
+  <article>
+    <h1 class="countdown-h">COUNTDOWN TO FESTIVAL</h1>
+    <img
+      src="https://timer-media.cannoli.app/media/timer/cc3fb5d9a00d4f6951bd3969ebcbfa0d8175104f09a21d6429f96e18d7233c04_t.gif"
+      alt="tralalalalala"
+    />
+    <div class="nedtæller-text">
+      <p>DAYS</p>
+      <p>HOURS</p>
+      <p>MIN</p>
+      <p>SEC</p>
+    </div>
+  </article>
 </section>
-.
+
+<style>
+  .countdown-container {
+    display: grid;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .nedtæller-text {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* Selvom p er i general css (og den er linket) så kan man stadig lave regler for den. fx: */
+  .nedtæller-text p {
+    margin-block-start: -10%;
+    font-size: 2rem;
+  }
+
+  .countdown-h {
+    color: #ccb1f3;
+    margin-block-end: -12%;
+    font-size: 2rem;
+    position: relative;
+  }
+</style>
