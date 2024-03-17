@@ -1,0 +1,52 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/general.css";
+import Navigation from "../components/Navigation.astro";
+import Footer from "../components/Footer.astro";
+---
+
+<Layout>
+  <h1>information</h1>
+  <h2>Find your way to the festival</h2>
+  <img src="/public/find_vej.webp" alt="map showing the way to the intrance" />
+  <address>
+    <a
+      href="https://www.google.com/maps/place/Refshalevej+193,+1432+K%C3%B8benhavn/data=!4m2!3m1!1s0x465252d50061fcd7:0x1e396bc2dce47e59?sa=X&ved=1t:242&ictx=111"
+      >Refshalevej 193, 1432 Copenhagen</a
+    >
+  </address>
+  <h2>Festival map</h2>
+  <img
+    src="/public/detaljekort-karrusel-square.webp"
+    alt="map showing the festival site"
+  />
+</Layout>
+
+<style>
+  h1 {
+    color: var(--purple_50);
+    font-family: transformers;
+    font-size: 3rem;
+    text-shadow: 0px 4px 4px var(--purple_100);
+  }
+  h2 {
+    color: var(--purple_30);
+    font-family: transformers;
+    text-transform: capitalize;
+    font-size: 1.5rem;
+    margin: 2rem 0 0;
+    text-shadow: 0px 4px 4px var(--purple_100);
+  }
+
+  address a {
+    color: var(--purple_30);
+    font-family: "Times New Roman", Times, serif;
+    font-size: 1rem;
+  }
+
+  img {
+    max-width: 50%;
+    height: auto;
+    margin-top: 1rem;
+  }
+</style>

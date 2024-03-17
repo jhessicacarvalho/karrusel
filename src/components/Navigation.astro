@@ -1,5 +1,5 @@
 ---
-
+import "../styles/general.css";
 ---
 
 <section class="nav_grid">
@@ -23,6 +23,31 @@
   </div>
 </section>
 <img class="tree" src="/karruseltree.webp" alt="Karrusel" />
+<header>
+  <article class="nav_grid">
+    <div>
+      <nav>
+        <a href="/"><img src="/Logo.svg" alt="Karrusel logo" /></a>
+      </nav>
+    </div>
+    <div>
+      <p>22-24 august, 2024 - Copenhagen, Refshaleøen</p>
+    </div>
+    <div class="burger">
+      <div class="hamburger"><div class="bar"></div></div>
+      <nav class="mobile_nav">
+        <a href="src/pages/buyticket.astro">Buy Ticket</a>
+        <a href="src/pages/program.astro"> Program</a>
+        <a href="src/pages/preyears.astro">Earlier Years</a>
+        <a href="src/pages/information.astro">Information</a>
+        <a href="src/pages/aboutus.astro">About Us</a>
+      </nav>
+    </div>
+  </article>
+  <figure class="tree-container">
+    <img class="tree" src="/karruseltree.webp" alt="Karrusel" />
+  </figure>
+</header>
 
 <style>
   .hamburger {
@@ -107,13 +132,17 @@
     justify-self: right;
   }
 
+  /* .tree-container {
+    display: grid;
+  } */
   .tree {
     float: right;
-    right: -14px;
+    right: -4%;
     overflow: hidden;
     top: -60px;
     position: relative;
     max-width: 100%;
+    z-index: -1;
   }
 </style>
 <script>
