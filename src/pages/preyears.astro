@@ -1,0 +1,78 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/general.css";
+---
+
+<Layout>
+  <h1>Earlier Years</h1>
+  <img src="https://placehold.co/600x400/png" alt="" />
+  <div class="container">
+    <img
+      src="../../public/pre_1.svg"
+      alt="Billede"
+      class="zoom-img"
+      id="zoomImg"
+    />
+    <img
+      src="../../public/pre_2.svg"
+      alt="Billede"
+      class="zoom-img"
+      id="zoomImg"
+    />
+    <img
+      src="../../public/pre_3.svg"
+      alt="Billede"
+      class="zoom-img"
+      id="zoomImg"
+    />
+  </div>
+</Layout>
+
+<style>
+  h1 {
+    font-family: transformers;
+    color: #ccb1f3;
+    text-shadow: 0 4px 0px #9e63f3;
+    text-align: center;
+  }
+
+  .grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .zoom-img {
+    width: 200px; /* Ændr størrelsen efter behov */
+    transition: transform 0.3s;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.2); /* Ændr zoom-niveauet efter behov */
+    cursor: pointer;
+  }
+
+  img {
+    padding-left: 70px;
+    padding-right: 70px;
+  }
+</style>
+
+<script>
+  const zoomImg = document.getElementById("zoomImg");
+  let isZoomed = false;
+
+  zoomImg.addEventListener("click", function () {
+    if (isZoomed) {
+      zoomImg.style.transform = "scale(1)";
+      isZoomed = false;
+    } else {
+      zoomImg.style.transform = "scale(4)"; /* Ændr zoom-niveauet efter behov */
+      isZoomed = true;
+    }
+  });
+</script>
