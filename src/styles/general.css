@@ -24,20 +24,23 @@ body {
 
 h1 {
   font-family: transformers;
-  font-size: 5vw;
+  font-size: 4rem;
   text-align: center;
   color: #ccb1f3;
-  text-shadow: 2px 2px 4px #9e63f3;
+  text-shadow: 0px 4px 4px var(--purple_100);
+  margin: 6rem 0rem 0rem;
 }
 
 h2 {
   font-family: transformers;
-  font-size: 28px;
+  font-size: 2rem;
   color: #f0e5ff;
+  text-shadow: 0px 4px 4px var(--purple_100);
+  margin: 3rem 0rem 0rem;
 }
 
 p {
-  color: #f0e5ff;
+  color: var(--purple_30);
   font-family: old style;
-  font-size: 17px;
+  font-size: 1rem;
 }

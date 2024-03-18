@@ -15,29 +15,16 @@ import Footer from "../components/Footer.astro";
       >Refshalevej 193, 1432 Copenhagen</a
     >
   </address>
+  <div class="rightside">
   <h2>Festival map</h2>
   <img
     src="/public/detaljekort-karrusel-square.webp"
     alt="map showing the festival site"
   />
+  </div>
 </Layout>
 
 <style>
-  h1 {
-    color: var(--purple_50);
-    font-family: transformers;
-    font-size: 3rem;
-    text-shadow: 0px 4px 4px var(--purple_100);
-  }
-  h2 {
-    color: var(--purple_30);
-    font-family: transformers;
-    text-transform: capitalize;
-    font-size: 1.5rem;
-    margin: 2rem 0 0;
-    text-shadow: 0px 4px 4px var(--purple_100);
-  }
-
   address a {
     color: var(--purple_30);
     font-family: "Times New Roman", Times, serif;
@@ -48,5 +35,9 @@ import Footer from "../components/Footer.astro";
     max-width: 50%;
     height: auto;
     margin-top: 1rem;
+  }
+
+  .rightside{
+    text-align: right;
   }
 </style>
