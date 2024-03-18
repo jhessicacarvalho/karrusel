@@ -3,76 +3,135 @@ import Layout from "../layouts/Layout.astro";
 import "../styles/general.css";
 ---
 
-
 <Layout>
   <div class="stjerne1_container">
-    <img src="../STJERNE" alt="" />
-    <img src="../STJERNE" alt="" />
+    <img class="small_star" src="../../public/star_ja.svg" alt="" />
+    <img class="big_star" src="../../public/star_ja.svg" alt="" />
   </div>
   <h1>ABOUT US</h1>
-  <img src="../ABOUT US BILLEDE" alt="" />
-  <section class="grid_1_1">
-    <div>
-      <h2>History</h2>
-      <p>
-        2024 marks the 5th edition of Karrusel. Karrusel is a circus themed rave
-        presenting some of the world's leading electronic artists.
-      </p>
-      <p>
-        Past editions include performances by Acid Pauli, Amelie Lens, Dixon,
-        FJAAK, Folamour, Hunee, Job Jobse, Kölsch, Mall Grab, Nastia,
-        Partiboi69, Peggy Gou, Richie Hawtin, Skin On Skin, The Blessed Madonna,
-        Victor Ruiz and VTSS.
-      </p>
-      <p>
-        The festival is open air and takes place on secluded green spot at the
-        abandoned shipyard of Refshaleøen in central Copenhagen.
-      </p>
+  <img class="aboutus" src="../../public/aboutus.png" alt="" />
+  <section class="about_us_margin">
+    <section class="grid_1_1">
+      <div class="his_container">
+        <h2>History</h2>
+        <p>
+          2024 marks the 5th edition of Karrusel. Karrusel is a circus
+          themed rave presenting some of the world's leading electronic
+          artists.
+        </p>
+        <p>
+          Past editions include performances by Acid Pauli, Amelie Lens,
+          Dixon, FJAAK, Folamour, Hunee, Job Jobse, Kölsch, Mall Grab,
+          Nastia, Partiboi69, Peggy Gou, Richie Hawtin, Skin On Skin, The
+          Blessed Madonna, Victor Ruiz and VTSS.
+        </p>
+        <p>
+          The festival is open air and takes place on secluded green spot at
+          the abandoned shipyard of Refshaleøen in central Copenhagen.
+        </p>
+      </div>
+      <div>
+        <h2>SUSTAINABILITY</h2>
+        <p>
+          Karrusel is committed to becoming more sustainable. In order to
+          save resources and reduce waste we use left over materials and
+          timber for stage designs and installations. We will re-use
+          production and print materials when possible year after year.
+          Beverages are served in reusable or sustainable materials. Straws
+          are not being used.
+        </p>
+        <p>
+          <strong>How you can help:</strong> Take a bike or public transport
+          to the festival. Don’t bring confetti or glitter to the festival.
+          There will be free tap water stations during the festival. Please
+          bring an empty cup or bottle and drink nice free tap water.
+        </p>
+      </div>
+    </section>
+    <div class="stjerne2_container">
+      <img class="small_star" src="../../public/star_ja.svg" alt="" />
+      <img class="big_star" src="../../public/star_ja.svg" alt="" />
     </div>
-    <div>
-      <h2>SUSTAINABILITY</h2>
+    <section>
+      <h2>FESTIVAL EXPERIENCE</h2>
       <p>
-        Karrusel is committed to becoming more sustainable. In order to save
-        resources and reduce waste we use left over materials and timber for
-        stage designs and installations. We will re-use production and print
-        materials when possible year after year. Beverages are served in
-        reusable or sustainable materials. Straws are not being used.
+        Karrusel believes in the right to a harassment-free festival
+        experience. We believe in the right of everyone to express
+        themselves.
       </p>
       <p>
-        <strong>How you can help:</strong> Take a bike or public transport to the
-        festival. Don’t bring confetti or glitter to the festival. There will be
-        free tap water stations during the festival. Please bring an empty cup or
-        bottle and drink nice free tap water.
+        Karrusel welcomes everybody – all with their different orientations,
+        experiences, histories and backgrounds. Karrusel only exists if
+        everyone takes care of each other, respects their own and others
+        boundaries, embraces diversity and acts as a part of the community.
       </p>
-    </div>
+      <p>
+        If you feel unsafe, please reach out to our awareness team. They
+        will be wearing a pink vests and walk around the site and be at
+        their base. Ask any festival staff and they will guide you to the
+        them.
+      </p>
+      <p>
+        Take responsibility for your own actions. Respect your own and
+        others boundaries. Speak up rather than look the other way
+      </p>
+    </section>
   </section>
-  <div class="stjerne2_container">
-    <img src="../STJERNE" alt="" />
-    <img src="../STJERNE" alt="" />
-  </div>
-  <section>
-    <h2>FESTIVAL EXPERIENCE</h2>
-    <p>
-      Karrusel believes in the right to a harassment-free festival experience.
-      We believe in the right of everyone to express themselves.
-    </p>
-    <p>
-      Karrusel welcomes everybody – all with their different orientations,
-      experiences, histories and backgrounds. Karrusel only exists if everyone
-      takes care of each other, respects their own and others boundaries,
-      embraces diversity and acts as a part of the community.
-    </p>
-    <p>
-      If you feel unsafe, please reach out to our awareness team. They will be
-      wearing a pink vests and walk around the site and be at their base. Ask
-      any festival staff and they will guide you to the them.
-    </p>
-    <p>
-      Take responsibility for your own actions. Respect your own and others
-      boundaries. Speak up rather than look the other way
-    </p>
-  </section>
-  <img src="../../public/karruseltree.webp" alt="" />
+  <img class="tree_venstre" src="../../public/karruseltree.webp" alt="" />
 </Layout>
 =======
 
+<style>
+  .aboutus {
+  width: 100vw;
+  object-fit: cover;
+}
+
+.grid_1_1 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: auto;
+  gap: 0;
+  margin: 0;
+}
+
+.his_container {
+  margin-right: 10%;
+  margin-bottom: 8%;
+}
+
+.about_us_margin {
+  padding: 8%;
+}
+
+.tree_venstre {
+  position: relative;
+  transform: scaleX(-1);
+  left: -1%;
+}
+
+/* STAR COMPONENT */
+
+
+
+.stjerne2_container {
+  position: absolute;
+  right: 0rem;
+  top: ;
+}
+.stjerne1_container {
+  position: absolute;
+  right: 38%;
+  top: -1%;
+  transform: scaleX(-1);
+}
+.small_star {
+  scale: 0.8;
+}
+
+.big_star {
+  position: relative;
+  top: -4.5rem;
+  left: -2.5rem;
+}
+</style>

@@ -10,10 +10,33 @@
 body {
   background-color: var(--background);
 }
-p {
+
+@font-face {
+  font-family: "transformers";
+  src: url(../font//TransformersMovie.ttf);
+}
+
+@font-face {
+  font-family: "old style";
+  src: url(../font/bitstream-iowan-old-style-bold-bt-586c371d8d669.ttf);
+}
+
+h1 {
+  font-family: transformers;
+  font-size: 5vw;
+  text-align: center;
+  color: #ccb1f3;
+  text-shadow: 2px 2px 4px #9e63f3;
+}
+
+h2 {
+  font-family: transformers;
+  font-size: 28px;
   color: #f0e5ff;
 }
 
-img {
-  /* max-width: 100%; */
+p {
+  color: #f0e5ff;
+  font-family: old style;
+  font-size: 17px;
 }
