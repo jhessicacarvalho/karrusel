@@ -1,0 +1,64 @@
+---
+const header = Astro.props.header;
+const pris = Astro.props.pris;
+const type = Astro.props.type;
+const text = Astro.props.text;
+---
+
+<div class="gradient-square">
+  <h3 class="header_text">{header}</h3>
+  <h2 class="type_text">{type}</h2>
+  <p class="text_text">{text}</p>
+  <p>{pris}</p>
+</div>
+
+<style>
+  .gradient-square {
+    width: 940px; /* Adjust as needed */
+    height: 500px; /* Adjust as needed */
+    background: linear-gradient(to bottom, #ff4d08, #ffba9f);
+    border-radius: 20px; /* Optional: Add rounded corners */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white; /* Optional: Text color */
+    padding: auto;
+    position: relative;
+  }
+
+  .header_text {
+    position: absolute;
+    top: 20px; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translateX(-50%); /* Center horizontally */
+    color: white;
+  }
+
+  .type_text {
+    position: absolute;
+    top: 15%; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Center both vertically and horizontally */
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.5;
+  }
+
+  .text_text {
+    position: absolute;
+    top: 25%; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Center both vertically and horizontally */
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.5;
+  }
+</style>

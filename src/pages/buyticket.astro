@@ -1,0 +1,20 @@
+---
+import Layout from "../layouts/Layout.astro";
+import "../styles/general.css";
+import Ticket from "../components/Ticket.astro";
+---
+
+<Layout>
+  <h1>Tickets</h1>
+  <Ticket
+    header="Karrusel 2024"
+    type="Festival pass - Early bird"
+    text="Early Bird Festival Passes on sale until 1 April. "
+    pris="800kr"
+  />
+  <Ticket
+    header="Karrusel 2024"
+    type="One day Festival Pass"
+    text="This pass will give you acces til either thursday, friday or saturday. "
+  />
+</Layout>
