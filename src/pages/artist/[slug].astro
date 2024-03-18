@@ -1,12 +1,13 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-
+/*
 export async function getStaticPaths() {
   const data = await fetch("https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/", { //mangler navnet på vores database//
     method: "GET",
     headers: { apikey: "API NØGLEN FRA SUPABASE" },
   }).then((res) => res.json());
- return.data.map(artist)=> {
+ 
+  return data.map(artist)=> {
     params: { slug: artist.slug}, //IKKE SIKKERT AT DET OGSÅ HEDDER SLUG, MEN TJEK PÅ SUPABASE//*
 props: {myData:artist}, 
 }
@@ -14,12 +15,11 @@ props: {myData:artist},
 
 const {myData} = Astro.props;
 console.log(myData);
+*/
 ---
 
 <Layout>
+  <!-- <h1>{myData.//kommer an på hvad vi har kaldt på supabase*//} </h1> -->
 
-    <!-- <h1>{myData.//kommer an på hvad vi har kaldt på supabase*//} </h1> -->
-
-    <!-- <img src={`/artist/${myData.image}`} alt="Artist"> SÅDAN HENTER VI BILLEDER-->
-
+  <!-- <img src={`/artist/${myData.image}`} alt="Artist"> SÅDAN HENTER VI BILLEDER-->
 </Layout>

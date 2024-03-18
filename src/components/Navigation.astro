@@ -23,6 +23,16 @@ import "../styles/general.css";
   </div>
 </section>
 <img class="tree" src="/karruseltree.webp" alt="Karrusel" />
+<script>
+  console.log("kode i navigation");
+  const menu_btn = document.querySelector(".hamburger");
+  const mobile_menu = document.querySelector(".mobile_nav");
+
+  menu_btn.addEventListener("click", function () {
+    menu_btn.classList.toggle("is-active");
+    mobile_menu.classList.toggle("is-active");
+  });
+</script>
 
 <style>
   .hamburger {
@@ -68,7 +78,7 @@ import "../styles/general.css";
     display: block;
     position: fixed;
     width: 100%;
-    min-height: 100vh;
+    max-height: 100vh;
     top: 0;
     left: 100%; /*gør at man ikke kan se den der popper ud*/
     z-index: 98;
@@ -84,14 +94,17 @@ import "../styles/general.css";
   .mobile_nav a {
     display: block;
     width: 100%;
-    margin: 0 auto 20px;
+    margin: 0 auto;
     text-align: center;
-    padding: 12px 16px;
+    padding: 0.5rem 16px;
     color: #ccb1f3;
     text-decoration: none;
     font-family: transformers;
     text-shadow: 0 4px 0px #9e63f3;
-    font-size: 5rem;
+    font-size: 4rem;
+  }
+  .mobile_nav a:last-child {
+    padding-bottom: 50rem;
   }
 
   .nav_grid {
@@ -105,29 +118,19 @@ import "../styles/general.css";
 
   .burger {
     justify-self: right;
+    position: relative;
   }
 
   /* .tree-container {
     display: grid;
   } */
   .tree {
-    float: right;
     right: -4%;
     overflow: hidden;
     top: -60px;
-    position: relative;
-    max-width: 100%;
+    position: absolute;
+    max-width: 90%;
     z-index: -1;
+    opacity: 0.6;
   }
 </style>
-<script>
-  window.onload = function () {
-    const menu_btn = document.querySelector(".hamburger");
-    const mobile_menu = document.querySelector(".mobile_nav");
-
-    menu_btn.addEventListener("click", function () {
-      menu_btn.classList.toggle("is-active");
-      mobile_menu.classList.toggle("is-active");
-    });
-  };
-</script>
