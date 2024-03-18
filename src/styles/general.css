@@ -17,12 +17,12 @@ img {
 
 @font-face {
   font-family: "transformers";
-  src: url(../karrusel_test/font/Transformers\ Movie.ttf);
+  src: url(../karrusel/font/Transformers\ Movie.ttf);
 }
 
 @font-face {
   font-family: "old style";
-  src: url(../karrusel_test/font/bitstream-iowan-old-style-bold-bt-586c371d8d669.ttf);
+  src: url(../karrusel/font/bitstream-iowan-old-style-bold-bt-586c371d8d669.ttf);
 }
 
 h1 {
