@@ -1,27 +1,36 @@
 ---
 import "../styles/general.css";
-const {image1, image2, image3, image4, artist1, artist2, artist3, artist4} = Astro.props;
+const {image1, image2, image3, image4, artist1, artist2, artist3, artist4, link1, link2, link3, link4} = Astro.props;
 ---
 
 <section class="grid">
+    
     <div>
+        <a href={link1}>
         <img class="cirkel" src={image1} alt="">
         <h3>{artist1}</h3>
+        </a>
     </div>
 
     <div>
+        <a href={link2}>
         <img class="cirkel" src={image2} alt="">
         <h3>{artist2}</h3>
+        </a>
     </div>
 
     <div>
+        <a href={link3}>
         <img class="cirkel" src={image3} alt="">
         <h3>{artist3}</h3>
+        </a>
     </div>
 
     <div>
+        <a href={link4}>
         <img class="cirkel" src={image4} alt="">
         <h3>{artist4}</h3>
+        </a>
     </div>
 </section>
 
@@ -30,7 +39,7 @@ const {image1, image2, image3, image4, artist1, artist2, artist3, artist4} = Ast
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         column-gap: 4rem;
-        margin: 2rem 8rem 8rem;
+        margin: 2rem 0rem 8rem;
     }
 
     .cirkel {
@@ -43,5 +52,9 @@ const {image1, image2, image3, image4, artist1, artist2, artist3, artist4} = Ast
         height: auto;
         box-shadow: 0px 0px 8px 8px #ff4d08;
         border-radius: 50%;
+    }
+
+    a {
+    text-decoration: none;
     }
 </style>
