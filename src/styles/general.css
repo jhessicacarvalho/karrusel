@@ -11,10 +11,6 @@ body {
   background-color: var(--background);
 }
 
-img {
-  /* max-width: 100%; */
-}
-
 @font-face {
   font-family: "transformers";
   src: url(../karrusel_test/font/Transformers\ Movie.ttf);
