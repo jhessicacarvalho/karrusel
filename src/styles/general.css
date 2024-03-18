@@ -39,6 +39,14 @@ h2 {
   margin: 3rem 0rem 0rem;
 }
 
+h3 {
+  font-family: transformers;
+  font-size: 1.2rem;
+  color: var(--orange);
+  margin: 1.5rem 0rem 0rem;
+  text-align: center;
+}
+
 p {
   color: var(--purple_30);
   font-family: old style;

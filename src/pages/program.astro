@@ -1,19 +1,36 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import Artist from "../components/Artist.astro";
-// const data = await fetch("https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/", {mangler navnet på database
-//   method: "GET",
-//   headers: { apikey: "API NØGLEN FRA SUPABASE" },
-// }).then((res) => res.json());
-// console.log(data); SÅDAN HENTER MAN DATA IND FRA SUPABASE.
+import "../styles/general.css";
+import Artistprogram from "../components/Artistprogram.astro"
 ---
 
 <Layout>
-  <section class="listeview">
-    {
-      data.map((thing) => {
-        return <Artist data={thing} />;
-      })
-    }
-  </section>
+  <h1>program</h1>
+  
+  <h2>THURSDAY</h2>
+  <Artistprogram 
+  image1="/public/peggy_gou.webp" artist1="Peggy Gou" 
+  image2="/public/fjaak.jpeg" artist2="Fjaak" 
+  image3="/public/haai.jpeg" artist3="Haai" 
+  image4="/public/mira.jpg" artist4="Mira"/>
+
+  <h2>FRIDAY</h2>
+   <Artistprogram 
+  image1="/public/narciss.jpeg" artist1="Narciss" 
+  image2="/public/richiehawtin.jpeg" artist2="Richie Hawtin" 
+  image3="/public/satori.jpeg" artist3="Satori" 
+  image4="/public/vtss.jpeg" artist4="VTSS"/>
+
+  <h2>SATURDAY</h2>
+   <Artistprogram 
+  image1="/public/narciss.jpeg" artist1="Narciss" 
+  image2="/public/richiehawtin.jpeg" artist2="Richie Hawtin" 
+  image3="/public/satori.jpeg" artist3="Satori" 
+  image4="/public/vtss.jpeg" artist4="VTSS"/>
 </Layout>
+
+<style>
+    h2{
+        text-align: center;
+    }
+</style>
