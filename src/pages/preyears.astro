@@ -5,25 +5,27 @@ import "../styles/general.css";
 
 <Layout>
   <h1>Earlier Years</h1>
-  <img src="https://placehold.co/600x400/png" alt="" />
+  <div class="header_container">
+    <img src="https://placehold.co/600x400/png" alt="" />
+  </div>
   <div class="container">
     <img
       src="../../public/pre_1.svg"
       alt="Billede"
       class="zoom-img"
-      id="zoomImg"
+      id="zoomImg1"
     />
     <img
       src="../../public/pre_2.svg"
       alt="Billede"
       class="zoom-img"
-      id="zoomImg"
+      id="zoomImg2"
     />
     <img
       src="../../public/pre_3.svg"
       alt="Billede"
       class="zoom-img"
-      id="zoomImg"
+      id="zoomImg3"
     />
   </div>
 </Layout>
@@ -39,6 +41,12 @@ import "../styles/general.css";
   .grid {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .header_container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
   }
 
   .container {
@@ -63,16 +71,40 @@ import "../styles/general.css";
 </style>
 
 <script>
-  const zoomImg = document.getElementById("zoomImg");
-  let isZoomed = false;
+  // Hent hvert af billederne fra HTML ved hjælp af deres unikke ID
+  const zoomImg1 = document.getElementById("zoomImg1");
+  const zoomImg2 = document.getElementById("zoomImg2");
+  const zoomImg3 = document.getElementById("zoomImg3");
 
-  zoomImg.addEventListener("click", function () {
-    if (isZoomed) {
-      zoomImg.style.transform = "scale(1)";
-      isZoomed = false;
-    } else {
-      zoomImg.style.transform = "scale(4)"; /* Ændr zoom-niveauet efter behov */
-      isZoomed = true;
-    }
+  // Opret variabler til at holde styr på om hvert billede er zoomet ind eller ej
+  let isZoomed1 = false;
+  let isZoomed2 = false;
+  let isZoomed3 = false;
+
+  // Tilføj en event listener til det første billede
+  zoomImg1.addEventListener("click", function () {
+    toggleZoom(zoomImg1, isZoomed1); // Kald funktionen toggleZoom med det første billede og dets zoom-status
+    isZoomed1 = !isZoomed1; // Opdater zoom-status for det første billede
   });
+
+  // Tilføj en event listener til det andet billede
+  zoomImg2.addEventListener("click", function () {
+    toggleZoom(zoomImg2, isZoomed2); // Kald funktionen toggleZoom med det andet billede og dets zoom-status
+    isZoomed2 = !isZoomed2; // Opdater zoom-status for det andet billede
+  });
+
+  // Tilføj en event listener til det tredje billede
+  zoomImg3.addEventListener("click", function () {
+    toggleZoom(zoomImg3, isZoomed3); // Kald funktionen toggleZoom med det tredje billede og dets zoom-status
+    isZoomed3 = !isZoomed3; // Opdater zoom-status for det tredje billede
+  });
+
+  // Funktionen til at skifte mellem at zoome ind og ud
+  function toggleZoom(image, isZoomed) {
+    if (isZoomed) {
+      image.style.transform = "scale(1)"; // Hvis billedet allerede er zoomet, så skaler det tilbage til normal størrelse (1x)
+    } else {
+      image.style.transform = "scale(2)"; // Hvis billedet ikke er zoomet, så skaler det til 3 gange dets oprindelige størrelse
+    }
+  }
 </script>
