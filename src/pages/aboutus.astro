@@ -8,7 +8,6 @@ import "../styles/general.css";
     <img class="small_star" src="../../public/star_ja.svg" alt="" />
     <img class="big_star" src="../../public/star_ja.svg" alt="" />
   </div>
-  <a href="/src/pages/artist/">Artist</a>
   <h1>ABOUT US</h1>
   <div class="img_comtainer">
   <img class="aboutus" src="../../public/aboutus.jpg" alt="" /></div>
@@ -85,14 +84,14 @@ import "../styles/general.css";
 
 <style>
   .aboutus {
-    width: 100%;
-    height: 100%;
-    object-fit: cover;
-}
+    max-width: 100%;
+    height: auto;
+    object-fit: scale-down;
+  }
 .img_container {
-
-    position: relative;
-    overflow: hidden; /* Sikrer at billedet beskæres inden for containeren */
+  padding-left: 8%;
+  padding-right: 8%;
+  overflow: hidden;
 }
 
 .grid_1_1 {
