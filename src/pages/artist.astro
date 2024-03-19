@@ -27,24 +27,79 @@ import "../styles/general.css";
 <div>
 <img src="../../public/peggygou.jpg" alt="">
 <section class="grid_1_1">
+  <div>
 <h3>TIME AND WHERE?</h3>
 <p>Saturday d. 21/06, 22:00-23:00
-  Manegen</p>
+  Manegen</p></div>
+<div>
 <h3>GENRE:</h3>
-<p>House, Techno & disco</p>
+<p>House, Techno & disco</p></div>
 </section>
 </div>
 </section>
+<div class="img_container">
 <img src="../../public/karruseltree.webp" alt="tree">
+</div>
 <h1>Line-up</h1>
+<section class="line-up">
+  <div class="artist">
+    <span class="artist-name">ACID PAULI</span>
+    <span><img src="../../public/star_ja.svg" alt="star"/></span>
+    <span class="artist-name">AME</span>
+    <span><img src="../../public/star_ja.svg" alt="star"/></span>
+    <span class="artist-name">FJAAK</span>
+  </div>
+  <div class="artist">
+    <span class="artist-name">MIRA</span>
+    <span><img src="../../public/star_ja.svg" alt="star"/></span>
+    <span class="artist-name">RICHIE HAWTIN</span>
+    <span><img src="../../public/star_ja.svg" alt="star"/></span>
+    <span class="artist-name">HAII</span>
+  </div>
+  <div class="artist">
+    <span class="artist-name">SATORI</span>
+    <span><img src="../../public/star_ja.svg" alt="star"/></span>
+    <span class="artist-name">KOLSCH</span>
+    <span><img src="../../public/star_ja.svg" alt="star"/></span>
+    <span class="artist-name">NARCISS</span>
+  </div>
+  <div class="artist">
+    <span class="artist-name">VTSS</span>
+    <span><img src="../../public/star_ja.svg" alt="star"/></span>
+    <span class="artist-name">SKIN ON SKIN</span>
+    <span><img src="../../public/star_ja.svg" alt="star"/></span>
+    <span class="artist-name">Kunstner 2</span>
+  </div>
+</section>
 </Layout>
 
 <style>
+.img_container {
+    width: 300px; /* Tilpas bredden efter dit layout */
+    height: 100px; /* Tilpas højden efter dit layout */
+    position: relative;
+    overflow: hidden; /* Sikrer at billedet beskæres inden for containeren */
+}
+.img_container img {
+    width: 80%;
+    height: 100%;
+    object-fit: cover;
+}
   .grid_1_1 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: auto;
   gap: 0;
   margin: 0;
+}
+
+.line-up {
+    font-family: transformers;
+}
+
+.artist {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
 }
 </style>
