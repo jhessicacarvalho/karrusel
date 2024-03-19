@@ -1,8 +1,7 @@
 ---
 import Layout from "../layouts/Layout.astro";
-import "../styles/general.css";
-
 import Artistcard from "../components/Artistcard.astro"
+import "../styles/general.css";
 
 const response = await fetch(
   "https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/program",
@@ -16,146 +15,18 @@ const response = await fetch(
 );
 const data = await response.json();
 console.log("data", data);
-=======
-import Artistprogram from "../components/Artistprogram.astro"
-const data = await fetch("https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/program", 
-{
-  method:"GET",
-  headers:{
-    apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4aXhidmJxdnlzb2J2aWx6dnRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MTA1ODAsImV4cCI6MjAyNjA4NjU4MH0.otcwFq8NXOsMpInRyBqcWEDfmC2mPYIB5gAnuiMKnlQ"
-  }
-}).then(res=>res.json());
-
-console.log(data);
-
-
-
           
-
 ---
 
 <Layout>
   <h1>program</h1>
 
-  <section>
+  <section class="grid">
     {data.map(artist=>{
       return     <Artistcard data={artist} />;
-
     })
     }
   </section>
-   <h2>THURSDAY</h2>
-  <section class="grid">
-  <Artistcard 
-  link="/artist"
-  image="/public/peggy_gou.webp" 
-  alt="Image of Peggy Gou"
-  artist="Peggy Gou" 
- />
-
-  <Artistcard 
-  link="/artist"
-  image="/public/fjaak.jpeg" 
-  alt="Image of Fjaak"
-  artist="Fjaak" 
- />
-
- <Artistcard 
-  link="/artist"
-  image="/public/haai.jpeg" 
-  alt="Image of Haai"
-  artist="Haai" 
- />
-
- <Artistcard 
-  link="/artist"
-  image="/public/mira.jpg" 
-  alt="Image of Mira"
-  artist="Mira" 
- />
- </section>
-=======
-  
-  <h2>THURSDAY</h2>
-  <Artistprogram 
-  link1="/artist"
-  link2="/artist"
-  link3="/artist"
-  link4="/artist"
-  image1={data.billede} artist1="Peggy Gou" 
-  image2="/public/fjaak.jpeg" artist2="Fjaak" 
-  image3="/public/haai.jpeg" artist3="Haai" 
-  image4="/public/mira.jpg" artist4="Mira"/>
-
-
-  <h2>FRIDAY</h2>
-     <section class="grid">
-  <Artistcard 
-  link="/artist"
-  image="/public/narciss.jpeg" 
-  alt="Image of Narciss"
-  artist="Narciss" 
- />
-
-  <Artistcard 
-  link="/artist"
-  image="/public/richiehawtin.jpeg" 
-  alt="Image of Richie Hawtin"
-  artist="Richie Hawtin" 
- />
-
- <Artistcard 
-  link="/artist"
-  image="/public/satori.jpeg" 
-  alt="Image of Satori"
-  artist="Satori" 
- />
-
- <Artistcard 
-  link="/artist"
-  image="/public/vtss.jpeg" 
-  alt="Image of VTSS"
-  artist="VTSS" 
- />
-
- <Artistcard 
-  link="/artist"
-  image="/public/vtss.jpeg" 
-  alt="Image of VTSS"
-  artist="VTSS" 
- />
-
- <Artistcard 
-  link="/artist"
-  image="/public/vtss.jpeg" 
-  alt="Image of VTSS"
-  artist="VTSS" 
- />
- </section>
-
-  <h2>SATURDAY</h2>
-  <section class="grid">
-  <Artistcard 
-  link="/artist"
-  image="/public/narciss.jpeg" 
-  alt="Image of Narciss"
-  artist="Narciss" 
- />
-
-  <Artistcard 
-  link="/artist"
-  image="/public/richiehawtin.jpeg" 
-  alt="Image of Richie Hawtin"
-  artist="Richie Hawtin" 
- />
-
- <Artistcard 
-  link="/artist"
-  image="/public/satori.jpeg" 
-  alt="Image of Satori"
-  artist="Satori" 
- />
- </section>
    
 </Layout>
 
