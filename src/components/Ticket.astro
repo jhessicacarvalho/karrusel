@@ -3,25 +3,32 @@ const header = Astro.props.header;
 const pris = Astro.props.pris;
 const type = Astro.props.type;
 const text = Astro.props.text;
+import Button from "./Button.astro";
 ---
 
-<div class="gradient-square">
-  <h3 class="header_text">{header}</h3>
-  <h2 class="type_text">{type}</h2>
-  <p class="text_text">{text}</p>
-  <p>{pris}</p>
+<div class="container">
+  <div class="gradient-square">
+    <h3 class="header_text">{header}</h3>
+    <h2 class="type_text">{type}</h2>
+    <p class="text_text">{text}</p>
+    <p class="pris_text">{pris}</p>
+    <div class="button_class">
+      <Button />
+    </div>
+  </div>
 </div>
-
 <style>
+  .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 70vh; /* Set the container height as needed */
+  }
   .gradient-square {
     width: 940px; /* Adjust as needed */
     height: 500px; /* Adjust as needed */
     background: linear-gradient(to bottom, #ff4d08, #ffba9f);
     border-radius: 20px; /* Optional: Add rounded corners */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    color: white; /* Optional: Text color */
     padding: auto;
     position: relative;
   }
@@ -42,15 +49,15 @@ const text = Astro.props.text;
       -50%,
       -50%
     ); /* Center both vertically and horizontally */
-    color: white;
+    color: #f0e5ff;
+    text-shadow: 0 4px 0px #9e63f3;
+    font-size: 3rem; /* Adjust font size as needed */
     text-align: center;
-    padding: 0 20px;
-    line-height: 1.5;
+    white-space: nowrap;
   }
-
   .text_text {
     position: absolute;
-    top: 25%; /* Adjust vertical position */
+    top: 28%; /* Adjust vertical position */
     left: 50%; /* Center horizontally */
     transform: translate(
       -50%,
@@ -60,5 +67,19 @@ const text = Astro.props.text;
     text-align: center;
     padding: 0 20px;
     line-height: 1.5;
+  }
+  .pris_text {
+    position: absolute;
+    top: 30%; /* Adjust vertical position */
+    left: 50%; /* Center horizontally */
+    transform: translate(
+      -50%,
+      -50%
+    ); /* Center both vertically and horizontally */
+    color: white;
+    text-align: center;
+    padding: 0 20px;
+    line-height: 1.5;
+    font-size: 7rem;
   }
 </style>
