@@ -1,11 +1,10 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/general.css";
-
 import Artistcard from "../components/Artistcard.astro"
 
 const response = await fetch(
-  "https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/program",
+  "https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/",
   {
     method: "GET",
     headers: {
@@ -16,27 +15,10 @@ const response = await fetch(
 );
 const data = await response.json();
 console.log("data", data);
-=======
-import Artistprogram from "../components/Artistprogram.astro"
-const data = await fetch("https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/program", 
-{
-  method:"GET",
-  headers:{
-    apikey:"eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4aXhidmJxdnlzb2J2aWx6dnRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MTA1ODAsImV4cCI6MjAyNjA4NjU4MH0.otcwFq8NXOsMpInRyBqcWEDfmC2mPYIB5gAnuiMKnlQ"
-  }
-}).then(res=>res.json());
-
-console.log(data);
-
-
-
-          
-
 ---
 
 <Layout>
   <h1>program</h1>
-
    <h2>THURSDAY</h2>
   <section class="grid">
   <Artistcard 
@@ -67,19 +49,6 @@ console.log(data);
   artist="Mira" 
  />
  </section>
-=======
-  
-  <h2>THURSDAY</h2>
-  <Artistprogram 
-  link1="/artist"
-  link2="/artist"
-  link3="/artist"
-  link4="/artist"
-  image1={data.billede} artist1="Peggy Gou" 
-  image2="/public/fjaak.jpeg" artist2="Fjaak" 
-  image3="/public/haai.jpeg" artist3="Haai" 
-  image4="/public/mira.jpg" artist4="Mira"/>
-
 
   <h2>FRIDAY</h2>
      <section class="grid">
