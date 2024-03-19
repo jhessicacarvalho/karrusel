@@ -28,6 +28,40 @@ import "../styles/general.css";
       id="zoomImg3"
     />
   </div>
+  <section>
+    <div class="nedtæller-text">
+      <p>2023</p>
+      <p>2022</p>
+      <p>2021</p>
+    </div>
+  </section>
+  <div class="container">
+    <img
+      src="../../public/pre_1.svg"
+      alt="Billede"
+      class="zoom-img"
+      id="zoomImg1"
+    />
+    <img
+      src="../../public/pre_2.svg"
+      alt="Billede"
+      class="zoom-img"
+      id="zoomImg2"
+    />
+    <img
+      src="../../public/pre_3.svg"
+      alt="Billede"
+      class="zoom-img"
+      id="zoomImg3"
+    />
+  </div>
+  <section>
+    <div class="nedtæller-text">
+      <p>2023</p>
+      <p>2022</p>
+      <p>2021</p>
+    </div>
+  </section>
 </Layout>
 
 <style>
@@ -36,6 +70,41 @@ import "../styles/general.css";
     color: #ccb1f3;
     text-shadow: 0 4px 0px #9e63f3;
     text-align: center;
+  }
+
+  .container {
+    text-align: center;
+    margin-top: 50px;
+  }
+
+  .image-container {
+    margin-bottom: 20px;
+  }
+
+  .zoom-img {
+    width: 200px; /* Adjust size as needed */
+    transition: transform 0.3s;
+  }
+
+  .zoom-img:hover {
+    transform: scale(1.2); /* Adjust zoom level as needed */
+    cursor: pointer;
+  }
+
+  .image-container img {
+    max-width: 100%;
+    height: auto;
+  }
+
+  .nedtæller-text {
+    display: flex;
+    justify-content: space-evenly;
+  }
+
+  /* Adjust spacing and font size for text under images */
+  .image-container p {
+    margin-top: 5px; /* Adjust as needed */
+    font-size: 14px; /* Adjust font size as needed */
   }
 
   .grid {
@@ -47,21 +116,6 @@ import "../styles/general.css";
     width: 100%;
     display: flex;
     justify-content: center;
-  }
-
-  .container {
-    text-align: center;
-    margin-top: 50px;
-  }
-
-  .zoom-img {
-    width: 200px; /* Ændr størrelsen efter behov */
-    transition: transform 0.3s;
-  }
-
-  .zoom-img:hover {
-    transform: scale(1.2); /* Ændr zoom-niveauet efter behov */
-    cursor: pointer;
   }
 
   img {
