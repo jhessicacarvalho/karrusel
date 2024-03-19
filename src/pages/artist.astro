@@ -5,7 +5,7 @@ const response = await fetch(
   "https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/artist",
   {
     method: "GET",
-    headers: {⁄
+    headers: {
       apikey:
         "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4aXhidmJxdnlzb2J2aWx6dnRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MTA1ODAsImV4cCI6MjAyNjA4NjU4MH0.otcwFq8NXOsMpInRyBqcWEDfmC2mPYIB5gAnuiMKnlQ",
     },
@@ -14,89 +14,102 @@ const response = await fetch(
 const data = await response.json();
 console.log("data", data);
 ---
+
 <Layout>
   <section class="grid_1_1">
     <div>
-<h1>Peggy Gou</h1>
-<p class="artist_tekst">Peggy Gou is a renowned South Korean DJ, music producer, and singer who has gained great popularity within the electronic music scene. She was born on July 3, 1990, in Incheon, South Korea, but is based in Berlin, Germany.<br><br>
+      <h1>Peggy Gou</h1>
+      <p class="artist_tekst">
+        Peggy Gou is a renowned South Korean DJ, music producer, and singer who
+        has gained great popularity within the electronic music scene. She was
+        born on July 3, 1990, in Incheon, South Korea, but is based in Berlin,
+        Germany.<br /><br />
 
-  Gou began her career as a DJ in Seoul and later moved to Berlin to pursue her musical ambitions. Her sound can be described as a fusion of various electronic genres such as house, techno, and acid, with elements of disco and funk.<br><br>
-  
-  She made her big breakthrough in 2016 with her debut EP "Art of War" and has since released music on reputable record labels such as Ninja Tune and Phonica Records. Her music has received praise from critics and fans alike for its innovative approach and irresistible rhythms.</p>
-</div>
-<div>
-<img class="artist_img" src="../../public/peggygou.jpg" alt="">
-<section class="grid_1_1">
-  <div>
-<h3>TIME AND WHERE?</h3>
-<p>Saturday d. 21/06, 22:00-23:00
-  Manegen</p></div>
-<div>
-<h3>GENRE:</h3>
-<p>House, Techno & disco</p></div>
-</section>
-</div>
-</section>
-<div class="img_container">
-<img src="../../public/karruseltree.webp" alt="tree">
-</div>
-<h1>Line-up</h1>
-<section class="line-up">
-  <div class="artist">
-    <span class="artist-name">ACID PAULI</span>
-    <span><img src="../../public/star_ja.svg" alt="star"/></span>
-    <span class="artist-name">AME</span>
-    <span><img src="../../public/star_ja.svg" alt="star"/></span>
-    <span class="artist-name">FJAAK</span>
+        Gou began her career as a DJ in Seoul and later moved to Berlin to
+        pursue her musical ambitions. Her sound can be described as a fusion of
+        various electronic genres such as house, techno, and acid, with elements
+        of disco and funk.<br /><br />
+
+        She made her big breakthrough in 2016 with her debut EP "Art of War" and
+        has since released music on reputable record labels such as Ninja Tune
+        and Phonica Records. Her music has received praise from critics and fans
+        alike for its innovative approach and irresistible rhythms.
+      </p>
+    </div>
+    <div>
+      <img class="artist_img" src="../../public/peggygou.jpg" alt="" />
+      <section class="grid_1_1">
+        <div>
+          <h3>TIME AND WHERE?</h3>
+          <p>Saturday d. 21/06, 22:00-23:00 Manegen</p>
+        </div>
+        <div>
+          <h3>GENRE:</h3>
+          <p>House, Techno & disco</p>
+        </div>
+      </section>
+    </div>
+  </section>
+  <div class="img_container">
+    <img src="../../public/karruseltree.webp" alt="tree" />
   </div>
-  <div class="artist">
-    <span class="artist-name">MIRA</span>
-    <span><img src="../../public/star_ja.svg" alt="star"/></span>
-    <span class="artist-name">RICHIE HAWTIN</span>
-    <span><img src="../../public/star_ja.svg" alt="star"/></span>
-    <span class="artist-name">HAII</span>
-  </div>
-  <div class="artist">
-    <span class="artist-name">SATORI</span>
-    <span><img src="../../public/star_ja.svg" alt="star"/></span>
-    <span class="artist-name">KOLSCH</span>
-    <span><img src="../../public/star_ja.svg" alt="star"/></span>
-    <span class="artist-name">NARCISS</span>
-  </div>
-  <div class="artist">
-    <span class="artist-name">VTSS</span>
-    <span><img src="../../public/star_ja.svg" alt="star"/></span>
-    <span class="artist-name">SKIN ON SKIN</span>
-    <span><img src="../../public/star_ja.svg" alt="star"/></span>
-    <span class="artist-name">Kunstner 2</span>
-  </div>
-</section>
+  <h1>Line-up</h1>
+  <section class="line-up">
+    <div class="artist">
+      <span class="artist-name">ACID PAULI</span>
+      <span><img src="../../public/star_ja.svg" alt="star" /></span>
+      <span class="artist-name">AME</span>
+      <span><img src="../../public/star_ja.svg" alt="star" /></span>
+      <span class="artist-name">FJAAK</span>
+    </div>
+    <div class="artist">
+      <span class="artist-name">MIRA</span>
+      <span><img src="../../public/star_ja.svg" alt="star" /></span>
+      <span class="artist-name">RICHIE HAWTIN</span>
+      <span><img src="../../public/star_ja.svg" alt="star" /></span>
+      <span class="artist-name">HAII</span>
+    </div>
+    <div class="artist">
+      <span class="artist-name">SATORI</span>
+      <span><img src="../../public/star_ja.svg" alt="star" /></span>
+      <span class="artist-name">KOLSCH</span>
+      <span><img src="../../public/star_ja.svg" alt="star" /></span>
+      <span class="artist-name">NARCISS</span>
+    </div>
+    <div class="artist">
+      <span class="artist-name">VTSS</span>
+      <span><img src="../../public/star_ja.svg" alt="star" /></span>
+      <span class="artist-name">SKIN ON SKIN</span>
+      <span><img src="../../public/star_ja.svg" alt="star" /></span>
+      <span class="artist-name">Kunstner 2</span>
+    </div>
+  </section>
 </Layout>
 
 <style>
-.artist_tekst{
-  margin-left: 3rem;
-  margin-right: 3rem;
-  line-height: 1.5;
-}
-.artist_img{
-  margin-top:6rem;
-}
+  .artist_tekst {
+    margin-left: 3rem;
+    margin-right: 3rem;
+    line-height: 1.5;
+  }
+  .artist_img {
+    margin-top: 6rem;
+  }
   .grid_1_1 {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-template-rows: auto;
-  gap: 0;
-  margin: 0;
-}
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: auto;
+    gap: 0;
+    margin: 0;
+  }
 
-.line-up {
+  .line-up {
     font-family: transformers;
-}
+  }
 
-.artist {
+  .artist {
     display: flex;
     align-items: center;
     margin-bottom: 2rem;
-}
+  }
 </style>
