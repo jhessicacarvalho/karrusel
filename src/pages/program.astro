@@ -1,48 +1,125 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/general.css";
-import Artistprogram from "../components/Artistprogram.astro"
+import Artistcard from "../components/Artistcard.astro"
+
+
 ---
 
 <Layout>
   <h1>program</h1>
-  
-  <h2>THURSDAY</h2>
-  <Artistprogram 
-  link1="/artist"
-  link2="/artist"
-  link3="/artist"
-  link4="/artist"
-  image1="/public/peggy_gou.webp" artist1="Peggy Gou" 
-  image2="/public/fjaak.jpeg" artist2="Fjaak" 
-  image3="/public/haai.jpeg" artist3="Haai" 
-  image4="/public/mira.jpg" artist4="Mira"/>
+   <h2>THURSDAY</h2>
+  <section class="grid">
+  <Artistcard 
+  link="/artist"
+  image="/public/peggy_gou.webp" 
+  alt="Image of Peggy Gou"
+  artist="Peggy Gou" 
+ />
+
+  <Artistcard 
+  link="/artist"
+  image="/public/fjaak.jpeg" 
+  alt="Image of Fjaak"
+  artist="Fjaak" 
+ />
+
+ <Artistcard 
+  link="/artist"
+  image="/public/haai.jpeg" 
+  alt="Image of Haai"
+  artist="Haai" 
+ />
+
+ <Artistcard 
+  link="/artist"
+  image="/public/mira.jpg" 
+  alt="Image of Mira"
+  artist="Mira" 
+ />
+ </section>
 
   <h2>FRIDAY</h2>
-   <Artistprogram 
-   link1="/artist"
-  link2="/artist"
-  link3="/artist"
-  link4="/artist"
-  image1="/public/narciss.jpeg" artist1="Narciss" 
-  image2="/public/richiehawtin.jpeg" artist2="Richie Hawtin" 
-  image3="/public/satori.jpeg" artist3="Satori" 
-  image4="/public/vtss.jpeg" artist4="VTSS"/>
+     <section class="grid">
+  <Artistcard 
+  link="/artist"
+  image="/public/narciss.jpeg" 
+  alt="Image of Narciss"
+  artist="Narciss" 
+ />
+
+  <Artistcard 
+  link="/artist"
+  image="/public/richiehawtin.jpeg" 
+  alt="Image of Richie Hawtin"
+  artist="Richie Hawtin" 
+ />
+
+ <Artistcard 
+  link="/artist"
+  image="/public/satori.jpeg" 
+  alt="Image of Satori"
+  artist="Satori" 
+ />
+
+ <Artistcard 
+  link="/artist"
+  image="/public/vtss.jpeg" 
+  alt="Image of VTSS"
+  artist="VTSS" 
+ />
+
+ <Artistcard 
+  link="/artist"
+  image="/public/vtss.jpeg" 
+  alt="Image of VTSS"
+  artist="VTSS" 
+ />
+
+ <Artistcard 
+  link="/artist"
+  image="/public/vtss.jpeg" 
+  alt="Image of VTSS"
+  artist="VTSS" 
+ />
+ </section>
 
   <h2>SATURDAY</h2>
-   <Artistprogram 
-   link1="/artist"
-  link2="/artist"
-  link3="/artist"
-  link4="/artist"
-  image1="/public/narciss.jpeg" artist1="Narciss" 
-  image2="/public/richiehawtin.jpeg" artist2="Richie Hawtin" 
-  image3="/public/satori.jpeg" artist3="Satori" 
-  image4="/public/vtss.jpeg" artist4="VTSS"/>
+  <section class="grid">
+  <Artistcard 
+  link="/artist"
+  image="/public/narciss.jpeg" 
+  alt="Image of Narciss"
+  artist="Narciss" 
+ />
+
+  <Artistcard 
+  link="/artist"
+  image="/public/richiehawtin.jpeg" 
+  alt="Image of Richie Hawtin"
+  artist="Richie Hawtin" 
+ />
+
+ <Artistcard 
+  link="/artist"
+  image="/public/satori.jpeg" 
+  alt="Image of Satori"
+  artist="Satori" 
+ />
+ </section>
+   
 </Layout>
 
 <style>
     h2{
         text-align: center;
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        column-gap: 4rem;
+        row-gap: 4rem;
+        margin: 2rem 0rem 8rem;
     }
 </style>

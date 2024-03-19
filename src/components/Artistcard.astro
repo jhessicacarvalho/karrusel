@@ -1,0 +1,31 @@
+---
+import "../styles/general.css";
+const {image, link, artist, alt} = Astro.props;
+---
+
+<section>
+        <a href={link}>
+        <img class="cirkel" src={image} alt="{alt}">
+        <h3>{artist}</h3>
+        </a>
+    </div>
+</section>
+
+
+<style>
+        .cirkel {
+        aspect-ratio: 1/1;
+        object-fit: cover;
+    }
+
+    img {
+        width: 100%;
+        height: auto;
+        box-shadow: 0px 0px 8px 8px #ff4d08;
+        border-radius: 50%;
+    }
+
+    a {
+    text-decoration: none;
+    }
+</style>
