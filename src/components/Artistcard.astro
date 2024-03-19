@@ -1,16 +1,14 @@
 ---
 import "../styles/general.css";
-const {image, link, artist, alt} = Astro.props;
+const {image, link, artist, alt, data} = Astro.props;
+console.log(data);
 ---
-
+<a href={`program/${data.slug}`}>
 <section>
-        <a href={link}>
-        <img class="cirkel" src={image} alt="{alt}">
-        <h3>{artist}</h3>
-        </a>
-    </div>
+        <img class="cirkel" src={data.img} alt="{alt}">
+        <h3>{data.artist_navn}</h3>
 </section>
-
+</a>
 
 <style>
         .cirkel {

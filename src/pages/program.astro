@@ -37,6 +37,13 @@ console.log(data);
 <Layout>
   <h1>program</h1>
 
+  <section>
+    {data.map(artist=>{
+      return     <Artistcard data={artist} />;
+
+    })
+    }
+  </section>
    <h2>THURSDAY</h2>
   <section class="grid">
   <Artistcard 
