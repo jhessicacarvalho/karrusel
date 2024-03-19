@@ -1,8 +1,8 @@
 ---
-
+const { buttonPosition } = Astro.props;
 ---
 
-<button class="button-square">
+<button data-variant={buttonPosition} class="button-square">
   <p>Buy now</p>
 </button>
 
@@ -23,5 +23,13 @@
   p {
     font-family: transformers;
     font-size: 1.5rem;
+  }
+  [data-variant="left"] {
+    top: 60%;
+    left: 15%;
+  }
+  [data-variant="right"] {
+    top: 60%;
+    left: 75%;
   }
 </style>

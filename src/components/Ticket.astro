@@ -3,6 +3,7 @@ const header = Astro.props.header;
 const pris = Astro.props.pris;
 const type = Astro.props.type;
 const text = Astro.props.text;
+const { buttonPosition } = Astro.props;
 import Button from "./Button.astro";
 ---
 
@@ -13,11 +14,19 @@ import Button from "./Button.astro";
     <p class="text_text">{text}</p>
     <p class="pris_text">{pris}</p>
     <div class="button_class">
-      <Button />
+      <Button buttonPosition={buttonPosition} />
     </div>
   </div>
 </div>
 <style>
+  .button_class {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    z-index: 5;
+    /*     position: absolute;
+    top: 50%; */
+  }
   .container {
     display: flex;
     justify-content: center;
@@ -39,6 +48,8 @@ import Button from "./Button.astro";
     left: 50%; /* Center horizontally */
     transform: translateX(-50%); /* Center horizontally */
     color: white;
+    font-family: transformers;
+    font-size: 1.5rem;
   }
 
   .type_text {
