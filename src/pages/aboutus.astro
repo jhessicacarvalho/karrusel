@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import "../styles/general.css";
 import Star1 from "../components/Star1.astro"
+import Tree from "../components/Tree.astro";
 ---
 
 <Layout>
@@ -76,7 +77,7 @@ import Star1 from "../components/Star1.astro"
       </p>
     </section>
   </section>
-  <img class="tree_venstre" src="../../public/karruseltree.webp" alt="tre" />
+  <Tree></Tree>
 </Layout>
 =======
 
@@ -109,14 +110,9 @@ import Star1 from "../components/Star1.astro"
 }
 
 .about_us_margin {
-  padding: 8%;
-}
-
-.tree_venstre {
-  position: relative;
-  transform: scaleX(-1);
-  left: 0%;
-  opacity: 0.7;
+  margin-left: 8%;
+  margin-right: 8%;
+  margin-bottom: 5%;
 }
 
 /* STAR COMPONENT */
