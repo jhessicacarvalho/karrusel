@@ -1,5 +1,7 @@
 ---
 import "../styles/general.css";
+import Button from "./Button.astro";
+const { buttonPosition } = Astro.props;
 ---
 
 <section class="countdown-container">
@@ -15,6 +17,7 @@ import "../styles/general.css";
       <p>MIN</p>
       <p>SEC</p>
     </div>
+    <Button buttonPosition={buttonPosition} />
   </article>
 </section>
 
