@@ -1,13 +1,11 @@
 ---
 import Layout from "../layouts/Layout.astro";
 import "../styles/general.css";
+import Star1 from "../components/Star1.astro"
 ---
 
 <Layout>
-  <div class="stjerne1_container">
-    <img class="small_star" src="../../public/star_ja.svg" alt="" />
-    <img class="big_star" src="../../public/star_ja.svg" alt="" />
-  </div>
+<Star1></Star1>
   <h1>ABOUT US</h1>
   <div class="img_comtainer">
   <img class="aboutus" src="../../public/aboutus.jpg" alt="" /></div>
@@ -78,11 +76,14 @@ import "../styles/general.css";
       </p>
     </section>
   </section>
-  <img class="tree_venstre" src="../../public/karruseltree.webp" alt="" />
+  <img class="tree_venstre" src="../../public/karruseltree.webp" alt="tre" />
 </Layout>
 =======
 
 <style>
+  .star1{
+    top: 100px;
+  }
   .aboutus {
     max-width: 100%;
     height: auto;
@@ -114,13 +115,11 @@ import "../styles/general.css";
 .tree_venstre {
   position: relative;
   transform: scaleX(-1);
-  left: -1%;
+  left: 0%;
+  opacity: 0.7;
 }
 
 /* STAR COMPONENT */
-
-
-
 .stjerne2_container {
   position: absolute;
   right: 0rem;
