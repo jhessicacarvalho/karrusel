@@ -1,9 +1,8 @@
 ---
 const { buttonPosition } = Astro.props;
-const farve = Astro.props.farve;
 ---
 
-<button data-variant={buttonPosition} class="button-square" class={farve}>
+<button data-variant={buttonPosition} class="button-square">
   <p>Buy now</p>
 </button>
 
@@ -22,17 +21,14 @@ const farve = Astro.props.farve;
     left: 37%;
   }
 
-  .forside_knap {
-    background-color: #ff4d08;
-    color: white;
-  }
   p {
     font-family: transformers;
     font-size: 1.5rem;
   }
   [data-variant="left"] {
-    top: 100%;
-    left: 42%;
+    top: 0%;
+    left: 35%;
+    background-color: #ff4d08;
   }
   [data-variant="right"] {
     top: 75%;
