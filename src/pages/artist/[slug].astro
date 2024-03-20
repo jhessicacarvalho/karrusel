@@ -20,15 +20,15 @@ export async function getStaticPaths() {
   });
 }
 
-const {myData} = Astro.props;
-console.log(myData);
+const {data} = Astro.props;
+console.log(data);
 
 ---
 
 <Layout>
-  <h1>{myData.artist_name}</h1>
-  <img src={`/artist/${myData.img}`} alt="Artist">
-  <p>{myData.description}</p>
-  <p>{myData.time_and_where}</p>
-  <p>{myData.genre}</p>
+  <h1>{data.name}</h1>
+  <img src={data.img} alt="Artist">
+  <p>{data.description}</p>
+  <p>{data.time_and_where}</p>
+  <p>{data.genre}</p>
 </Layout>

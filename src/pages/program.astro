@@ -3,23 +3,20 @@ import Layout from "../layouts/Layout.astro";
 import Artistcard from "../components/Artistcard.astro"
 import "../styles/general.css";
 
-const response = await fetch(
-  "https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/program",
-  {
-    method: "GET",
+const data = await fetch("https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/artist",{
+  method: "GET",
     headers: {
       apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4aXhidmJxdnlzb2J2aWx6dnRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MTA1ODAsImV4cCI6MjAyNjA4NjU4MH0.otcwFq8NXOsMpInRyBqcWEDfmC2mPYIB5gAnuiMKnlQ",
-    },
-  }
-);
-const data = await response.json();
-console.log("data", data);
-          
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4aXhidmJxdnlzb2J2aWx6dnRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MTA1ODAsImV4cCI6MjAyNjA4NjU4MH0.otcwFq8NXOsMpInRyBqcWEDfmC2mPYIB5gAnuiMKnlQ"
+    }
+      }).then(res=>res.json());
+
+      console.log(data);      
 ---
 
 <Layout>
   <h1>program</h1>
+  <h2>THURSDAY</h2>
 
   <section class="grid">
     {data.map(artist=>{

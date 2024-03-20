@@ -1,14 +1,12 @@
 ---
 import "../styles/general.css";
-const {image, link, artist, alt, data} = Astro.props;
+const {data} = Astro.props;
 console.log(data);
 ---
-<a href={`program/${data.slug}`}>
 <section>
         <img class="cirkel" src={data.img} alt="{alt}">
-        <h3>{data.artist_navn}</h3>
+        <h3>{data.name}</h3>
 </section>
-</a>
 
 <style>
         .cirkel {
