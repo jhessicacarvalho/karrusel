@@ -17,15 +17,23 @@ const { buttonPosition } = Astro.props;
       <p>MIN</p>
       <p>SEC</p>
     </div>
-    <Button buttonPosition={buttonPosition} />
   </article>
+  <div class="button_class">
+    <Button buttonPosition={buttonPosition} />
+  </div>
 </section>
 
 <style>
+  .button_class {
+    position: relative;
+    width: 100%; /*dette er så vi kan placere knappen ift til containerens størrelse*/
+    height: 100%;
+  }
   .countdown-container {
     display: grid;
     justify-content: center;
     text-align: center;
+    padding-bottom: 190px;
   }
 
   .nedtæller-text {
@@ -42,7 +50,7 @@ const { buttonPosition } = Astro.props;
   .countdown-h {
     color: #ccb1f3;
     margin-block-end: -12%;
-    font-size: 2rem;
+    font-size: 3.5rem;
     position: relative;
   }
 </style>
