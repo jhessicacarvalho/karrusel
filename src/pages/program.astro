@@ -17,14 +17,14 @@ const data = await fetch("https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/artis
 <Layout>
   <h1>program</h1>
   <h2>THURSDAY</h2>
-
+<a href={`program/${data.slug}`}>
   <section class="grid">
     {data.map(artist=>{
       return     <Artistcard data={artist} />;
     })
     }
   </section>
-   
+   </a>
 </Layout>
 
 <style>

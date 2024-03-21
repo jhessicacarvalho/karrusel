@@ -1,24 +1,32 @@
 ---
-import Layout from "../layouts/Layout.astro";
+import Layout from "../../layouts/Layout.astro";
 import "../styles/general.css";
-const response = await fetch(
-  "https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/artist",
+export async function getStaticPaths() {
+  const data = await fetch("https://cxixbvbqvysobvilzvts.supabase.co/rest/v1/artist",
   {
-    method: "GET",
+  method: "GET",
     headers: {
       apikey:
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4aXhidmJxdnlzb2J2aWx6dnRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MTA1ODAsImV4cCI6MjAyNjA4NjU4MH0.otcwFq8NXOsMpInRyBqcWEDfmC2mPYIB5gAnuiMKnlQ",
-    },
-  }
-);
-const data = await response.json();
-console.log("data", data);
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN4aXhidmJxdnlzb2J2aWx6dnRzIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MTA1MTA1ODAsImV4cCI6MjAyNjA4NjU4MH0.otcwFq8NXOsMpInRyBqcWEDfmC2mPYIB5gAnuiMKnlQ"
+    }
+      }
+      ).then(response => response.json());
+
+  return data.map((program) => {
+    return {
+      params: { slug: program.slug},
+      props: {myData:program},
+    };
+  });
+}
+const {myData} = Astro.props;
+console.log(myData);
 ---
 
 <Layout>
   <section class="grid_1_1">
     <div>
-      <h1>Peggy Gou</h1>
+      <h1>{myData.name}</h1>
       <p class="artist_tekst">
         Peggy Gou is a renowned South Korean DJ, music producer, and singer who
         has gained great popularity within the electronic music scene. She was
