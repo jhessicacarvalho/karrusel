@@ -7,6 +7,10 @@ import Footer from "../components/Footer.astro";
 
 <Layout>
   <h1>information</h1>
+  <div class="stjerne2_container">
+    <img class="small_star" src="../../public/star_ja.svg" alt="star" />
+    <img class="big_star" src="../../public/star_ja.svg" alt="star" />
+  </div>
   <h2>Find your way to the festival</h2>
   <img src="/public/find_vej.webp" alt="map showing the way to the intrance" />
   <address>
@@ -15,12 +19,16 @@ import Footer from "../components/Footer.astro";
       >Refshalevej 193, 1432 Copenhagen</a
     >
   </address>
+  <div class="stjerne1_container">
+    <img class="small_star" src="../../public/star_ja.svg" alt="star" />
+    <img class="big_star" src="../../public/star_ja.svg" alt="star" />
+  </div>
   <div class="rightside">
-  <h2>Festival map</h2>
-  <img
-    src="/public/detaljekort-karrusel-square.webp"
-    alt="map showing the festival site"
-  />
+    <h2>Festival map</h2>
+    <img
+      src="/public/detaljekort-karrusel-square.webp"
+      alt="map showing the festival site"
+    />
   </div>
 </Layout>
 
@@ -37,7 +45,31 @@ import Footer from "../components/Footer.astro";
     margin-top: 1rem;
   }
 
-  .rightside{
+  .rightside {
     text-align: right;
+  }
+
+  /* STAR COMPONENT */
+  .stjerne2_container {
+    position: absolute;
+    right: 1rem;
+    top: 16rem;
+  }
+  .stjerne1_container {
+    position: absolute;
+    right: 86%;
+    bottom: -70%;
+    transform: scaleX(-1);
+  }
+  .small_star {
+    scale: 0.9;
+    top: 3rem;
+  }
+
+  .big_star {
+    position: relative;
+    top: -1.5rem;
+    left: -2.5rem;
+    scale: 0.5;
   }
 </style>

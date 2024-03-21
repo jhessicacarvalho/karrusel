@@ -9,6 +9,38 @@ import Button from "../components/Button.astro";
 
 <Layout>
   <Karrusel />
+  <div class="stjerne2_container">
+    <img class="small_star" src="../../public/star_ja.svg" alt="star" />
+    <img class="big_star" src="../../public/star_ja.svg" alt="star" />
+  </div>
   <Tree />
   <Countdown buttonPosition="left" />
+  <div class="stjerne1_container">
+    <img class="small_star" src="../../public/star_ja.svg" alt="star" />
+    <img class="big_star" src="../../public/star_ja.svg" alt="star" />
+  </div>
 </Layout>
+
+<style>
+  /* STAR COMPONENT */
+  .stjerne2_container {
+    position: absolute;
+    right: 1rem;
+    top: 16rem;
+  }
+  .stjerne1_container {
+    position: absolute;
+    right: 86%;
+    bottom: -24%;
+    transform: scaleX(-1);
+  }
+  .small_star {
+    scale: 0.8;
+  }
+
+  .big_star {
+    position: relative;
+    top: -4.5rem;
+    left: -2.5rem;
+  }
+</style>
